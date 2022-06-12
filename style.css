@@ -1,0 +1,146 @@
+.whole_page{
+    max-width: 1400px;
+  
+    margin: 0 auto;
+}
+.navbar{
+    background-color: #fff !important;
+}
+.left{
+    flex: 1;
+    background-color: #f8f8fa;
+}
+
+.right img{
+    width: 100%;
+    max-height: 90vh;
+}
+
+.website_button{
+    background: #151515;
+    padding: 0.8rem 2.1rem;
+    color: white;
+    border-radius: .8rem;
+    transition: color 3s;
+}
+
+.website_button:hover{
+    background: linear-gradient(#151515, #1612316b);
+}
+
+
+
+/* mobile */
+
+@media (max-width: 52em) {
+    .landing_page{
+        flex-direction: column-reverse;
+        height: 100vh;
+    }
+    .right{ 
+        flex-basis: 48vh;
+    }
+    .right > img{
+        height: 48vh;
+    }
+    .left{
+        background-color: #f8f8fa;
+        text-align: center;
+    }
+    .left > div{
+        text-align: center;
+    }
+    /* inner styling */
+    .left > div > h1{
+        font-weight: 800;
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+    .left > div > p{
+        color: rgba(0, 0, 0, 0.396);
+        margin-bottom: 1.3rem;
+    }
+  
+}
+
+@media (min-width: 52.01em) {
+    .left > div{
+        position: relative;
+      top: 50%;
+      left: 0%;
+      transform: translate(23%, -50%);
+    }
+    /* inner styling */
+    .left > div > h1{
+        font-weight: 800;
+        font-size: 3.8rem;
+        margin-bottom: 1rem;
+    }
+    .left > div > p{
+        color: rgba(0, 0, 0, 0.396);
+        margin-bottom: 1.3rem;
+    }
+}
+
+
+
+.margin-l{
+    margin-left: 8px;
+}
+
+/* modal */
+
+
+.show-modal {
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 1.75rem 3.5rem;
+  margin: 5rem 2rem;
+  border: none;
+  background-color: #fff;
+  color: #444;
+  border-radius: 10rem;
+  cursor: pointer;
+}
+
+.close-modal {
+  position: absolute;
+  top: 1.2rem;
+  right: 2rem;
+  font-size: 5rem;
+  color: #333;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+/* -------------------------- */
+/* CLASSES TO MAKE MODAL WORK */
+.hidden {
+  display: none;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+
+  background-color: white;
+  padding: 6rem;
+  border-radius: 5px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 100000000000000000000000000000;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+}
+
